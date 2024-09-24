@@ -1,5 +1,6 @@
 // src/components/IngredientList.jsx
 import React from "react";
+// import App from "../App";
 
 
 const IngredientList = (props) => {
@@ -9,7 +10,7 @@ const IngredientList = (props) => {
             <ul>{props.ingredients.map((ingredient) => (
                 <li key={ingredient.name} style={{color: ingredient.color}}>
                     {ingredient.name}
-                    <button onClick={() => addToBurger(ingredient)}>+</button>
+                    <button onClick={() => props.addToBurger(ingredient.name)}>+</button>
                 </li>
                 ))}
             </ul>
