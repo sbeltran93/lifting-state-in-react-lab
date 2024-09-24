@@ -1,5 +1,6 @@
 // src/components/BurgerStack.jsx
 import React from 'react'
+
 const BurgerStack = ({stack, removeFromBurger}) => {
   return (
     <ul>
@@ -7,7 +8,7 @@ const BurgerStack = ({stack, removeFromBurger}) => {
         <li key={index} style={{ color: ingredient.color }}>
           {ingredient.name}
           <button onClick={() => removeFromBurger(index)}>X</button>
-          </li>
+        </li>
       ))}
     </ul>
   );
